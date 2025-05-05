@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>کافه موندُو</title>
+  <style>
+    body { font-family: sans-serif; background: #f2f2f2; text-align: center; padding: 40px; direction: rtl; }
+    .container { background: white; padding: 30px; max-width: 500px; margin: auto; border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+    input, button { width: 80%; padding: 10px; margin: 10px 0; font-size: 16px; border-radius: 8px; border: 1px solid #ccc; }
+    button { background-color: #333; color: white; cursor: pointer; }
+    #result { margin-top: 30px; white-space: pre-line; color: #444; font-size: 18px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>کافه موندُو</h2>
+    <p>اسمت چیه و چند سالته؟</p>
+    <input type="text" id="name" placeholder="اسم">
+    <input type="number" id="age" placeholder="سن">
+    <button onclick="generateMessage()">نکست</button>
+    <div id="result"></div>
+  </div>
+
+  <script>
+    function generateMessage() {
+      const name = document.getElementById("name").value;
+      const age = document.getElementById("age").value;
+
+      if (!name || !age) {
+        alert("لطفاً اسم و سنت رو وارد کن.");
+        return;
+      }
+
+      const message = `سلام چطوری ${name}
+
+میدونم ${name} طرف و حتی میدونم ${age} سالته
+ولی ${name} جان باور کن این ذره‌ای برام اهمیت نداره
+تنها چیزی که برام مهمه اینه که بیای
+کافه ما یه چیزی سفارش بدی، ما
+فروشمون بیشتر شه، آخر ماه چک داریم
+
+عشق منی‌ا ولی اگه نیای
+خیلی خری!
+خدایی نامردی!
+دلخور نشیا ولی ان‌شاءالله بری زیر دوچرخه اگه نیای
+
+قربونت برم، بازم خودت می‌دونی، من هیچ
+اجباری ندارم. لینک پیجمونو برات گذاشتم.
+خواستی بیا
+نخواستیم خاک تو سرت، لیاقت نداری
+
+آیدی اینستاگرام:
+@Cofe_mondo`;
+
+      document.getElementById("result").innerText = message;
+    }
+  </script>
+</body>
+</html
